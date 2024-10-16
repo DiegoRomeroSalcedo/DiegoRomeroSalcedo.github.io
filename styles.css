@@ -1,0 +1,334 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.img-fondo-principal-main {
+    height: 87vh;
+    background-image: url('images/SL-022122-48700-09.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    position: relative;
+    mask-image: linear-gradient(
+        black 60%, 
+        transparent
+    );
+}
+
+.inicio {
+    top: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    padding: 37px;
+}
+
+.img-foto-perfil {
+    margin-top: 90px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-10deg);
+}
+
+.description {
+    font-size: 1.1rem;
+    text-wrap: balance;
+}
+
+.slider {
+    height: auto;
+    background: linear-gradient(transparent 85%, #292929);
+    border-bottom: 1px solid #ddd;
+}
+
+.slide-track {
+    animation: scroll 25s linear infinite;
+    -webkit-animation: scroll 25s linear infinite;
+    width: calc(200px * 12);
+}
+
+.slide-icon{
+    width: 200px;
+}
+
+.slide-icon i {
+    font-size: 60px;
+}
+
+.subtitle-experience {
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.fec-experience {
+    font-size: 1rem;
+    color: rgb(158 162 166);
+}
+
+.description-experience {
+    color: rgb(158 162 166);
+    font-size: 1.1rem;
+    text-wrap: balance;
+}
+
+.carousel {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.skills-proyects {
+    font-size: 2rem !important;
+}
+
+.carousel-caption {
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+}
+
+.description-proyect {
+    font-size: 1.1rem;
+}
+
+.icon-extern {
+    font-size: 1.2rem !important;
+    padding-top: 15px;
+    padding-right: 15px;
+    z-index: 10;
+}
+
+.icon-extern:hover {
+    scale: 1.2;
+}
+
+.about-me {
+    font-size: 1.2rem;
+    margin-top: 100px;
+    color: rgb(158 162 166);
+    text-wrap: balance;
+}
+
+.gear {
+    top: 5%;
+    right: 25%;
+    font-size: 6rem;
+    color: rgb(183, 65, 14);
+    animation: rotate 25s linear infinite;
+}
+
+.gear-two {
+    top: 8%;
+    right: 20.7%;
+    color: rgb(183, 65, 14);
+    font-size: 6rem;
+    animation: rotate-reverse 25s linear infinite;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 10px;
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.curriculum {
+    color: #d80000;
+    font-size: 1.4rem;
+}
+
+button:hover {
+    scale: 1.1;
+}
+
+.label-button-download {
+    color: rgb(158 162 166);
+    margin-left: 20px;
+}
+
+.descriptio-about-me::first-letter {
+    font-size: 1.5rem;
+    color: rgb(13 110 253);
+}
+
+
+footer {
+    min-height: 25vh;
+}
+
+/* Animación de nuestro slider para las skills */
+
+@keyframes scroll {
+    0% {
+        -webkit-trasnform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 6));
+        transform: translateX(calc(-200px *6));
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Medias Querys del contenido adaptable */
+
+@media screen and (max-width: 767px) {
+    .inicio {
+        margin: 0;
+        width: 100% !important; 
+    }
+
+    .gear {
+        top: 5%;
+        right: 15%;
+        font-size: 4rem;
+        color: rgb(183, 65, 14);
+    }
+
+    .gear-two {
+        top: 7%;
+        right: 10%;
+        color: rgb(183, 65, 14);
+        font-size: 4rem;
+    }
+
+    .slider {
+        margin: 70px 0 50px 0;
+        width: 100%;
+    }
+
+    .title-proyect {
+        font-size: 1.1rem;
+    }
+    
+    .description-experience {
+        font-size: 1rem;
+    }
+
+    .description-proyect {
+        font-size: 1rem;
+    }
+
+    .descriptio-about-me {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 575px){
+
+    .inicio {
+        padding: 0;
+    }
+
+    .inicio-section {
+        margin: 0 auto;
+    }
+    .img-marca {
+        display: none;
+    }
+
+    .img-foto-perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .text-start {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .inicio-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .description {
+        text-align: center;
+        padding: 3px;
+        width: 100% !important;
+    }
+
+    .container-cv {
+        /* align-self: flex-start; */
+        scale: 0.8;
+    }
+
+    .slider {
+        margin: 0 auto;
+        width: 85%;
+    }
+
+    .slide-icon {
+        width: 100px;
+    }
+
+    .slide-icon i {
+        font-size: 40px;
+    }
+
+    .subtitle-experience, .fec-experience, .description-experience {
+        text-align: center;
+    }
+
+    .title-proyect {
+        font-size: 0.9rem;
+    }
+
+    .description-proyect {
+        font-size: 0.8rem;
+    }
+
+    .skills-proyects {
+        font-size: 0.8rem !important;
+    }
+
+    .about-me {
+        padding: 0 15px 0 15px;
+    }
+    .descriptio-about-me {
+        text-align: center;
+    }
+    
+    #carruseldataproyect {
+        padding: 0 15px 0 15px;
+    }
+
+    @keyframes scroll {
+        0% {
+            -webkit-trasnform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(-100px * 6));
+            transform: translateX(calc(-100px *6));
+        }
+    }
+}
+
